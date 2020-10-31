@@ -25,6 +25,12 @@ $(document).ready(function () {
         NewQuote();
     })
 
+    $('#tweet-quote').attr(
+      'href',
+      'https://twitter.com/intent/tweet?text=' +
+        encodeURIComponent('"' + document.getElementById("text").innerText + '" ' + document.getElementById("author").innerText)
+    );
+
     function NewQuote() {
         let targetText = document.getElementById("text");
         let targetAuthor = document.getElementById("author");
